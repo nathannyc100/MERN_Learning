@@ -5,20 +5,20 @@ function App() {
 
 
     return (
-            <>
+        <>
             <Board />
 
-            </>
-           )
+        </>
+    )
 
 }
 
 interface SquareVars {
-value: number;
+    value: number;
 }
 
 interface BoardVars {
-value: number;
+    value: number;
 }
 
 class Square extends React.Component<SquareVars> {
@@ -28,10 +28,10 @@ class Square extends React.Component<SquareVars> {
 
     render() {
         return (
-                <button className = "square">
+            <button className = "square">
                 {this.props.value}
-                </button>
-               );
+            </button>
+        );
     }
 }
 
@@ -43,26 +43,26 @@ class Board extends React.Component<{}, BoardVars> {
 
     render() {
         const status: string = "hello"
-            return (
-                    <div>
-                    <div className='status'>{status}</div>
-                    <div className='board-row'>
+        return (
+            <div>
+                <div className='status'>{status}</div>
+                <div className='board-row'>
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
                     {this.renderSquare(2)}
-                    </div>
-                    <div className='board-row'>
+                </div>
+                <div className='board-row'>
                     {this.renderSquare(3)}
                     {this.renderSquare(4)}
                     {this.renderSquare(5)}
-                    </div>
-                    <div className='board-row'>
+                </div>
+                <div className='board-row'>
                     {this.renderSquare(6)}
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
-                    </div>
-                    </div>
-                   )
+                </div>
+            </div>
+        )
     }
 }
 
