@@ -1,5 +1,5 @@
 import express from 'express'
-import Gun from '../models/gunModel'
+import Gun from '../models/gunModel.js'
 
 const router = express.Router()
 
