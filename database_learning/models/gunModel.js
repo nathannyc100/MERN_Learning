@@ -14,10 +14,10 @@ const gunSchema = new Schema({
     manufactoringCompanies: [{type: Schema.Types.ObjectId, ref: 'Company'}],
     impelmentedForces: [{type: Schema.Types.ObjectId, ref: 'Force'}],
     designations: [{type: Schema.Types.ObjectId, ref: 'Designation'}],
-    firingModes: [{types: Schema.Types.ObjectId, ref: 'FiringMode'}],
+    firingModes: [{type: Schema.Types.ObjectId, ref: 'FiringMode'}],
     actionType: {type: Schema.Types.ObjectId, ref: 'Action'},
     cartridgeTypes: [{type: Schema.Types.ObjectId, ref: 'Cartridge'}],
     barrelLengths: [Number],
 }, { timestamps: true });
 
-export default mongoose.gunModelModel('Gun', gunSchema);
+export default mongoose.model('Gun', gunSchema);
