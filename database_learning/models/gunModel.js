@@ -2,11 +2,11 @@ import mongoose from 'mongoose'
 import Company from './companyModel.js'
 import Force from './forceModel.js'
 import Designation from './designationModel.js'
-import FiringMode from './firingModeModel.js'
+import Firingmode from './firingModeModel.js'
 import Action from './actionModel.js'
 import Cartridge from './cartridgeModel.js'
 
-const { Schema } = mongoose
+const { Schema } = mongoose;
 
 const gunSchema = new Schema({
     name: {type: String, required: true},
@@ -18,6 +18,6 @@ const gunSchema = new Schema({
     actionType: {type: Schema.Types.ObjectId, ref: 'Action'},
     cartridgeTypes: [{type: Schema.Types.ObjectId, ref: 'Cartridge'}],
     barrelLengths: [Number],
-}, { timestamps: true })
+}, { timestamps: true });
 
-export default mongoose.Model('Gun', gunSchema) 
+export default mongoose.gunModelModel('Gun', gunSchema);
