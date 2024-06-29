@@ -8,7 +8,7 @@ import Cartridge from './cartridgeModel.js'
 
 const { Schema } = mongoose;
 
-const gunSchema = new Schema({
+const firearmSchema = new Schema({
     name: {type: String, required: true},
     inventorCompany: {type: Schema.Types.ObjectId, ref: 'Company'},
     manufactoringCompanies: [{type: Schema.Types.ObjectId, ref: 'Company'}],
@@ -20,4 +20,4 @@ const gunSchema = new Schema({
     barrelLengths: [Number],
 }, { timestamps: true });
 
-export default mongoose.model('Gun', gunSchema);
+export default mongoose.model('Firearm', firearmSchema);

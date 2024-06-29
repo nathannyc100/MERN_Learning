@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
 
-import gunsRoutes from './routes/guns.js'
+import gunsRoutes from './routes/firearms.js'
 
 const app = express()
 dotenv.config()
