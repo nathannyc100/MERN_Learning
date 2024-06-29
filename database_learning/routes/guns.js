@@ -1,34 +1,34 @@
-import express from 'express'
-import Gun from '../models/gunModel.js'
+import express from 'express';
+import Gun from '../models/gunModel.js';
 
-const router = express.Router()
+const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.json({mssg: 'get all guns'})
-})
+    res.json({mssg: 'get all guns'});
+});
 
 router.get('/:id', (req, res) => {
-    res.json({mssg: 'get specific gun'})
-})
+    res.json({mssg: 'get specific gun'});
+});
 
 router.post('/', async (req, res) => {
-    const {name} = req.body
+    const {name} = req.body;
 
 
     try {
-        const gun = await Gun.create()
-        res.status(200).json(gun)
+        const gun = await Gun.create({ name });
+        res.status(200).json(gun);
     } catch (error) {
-        res.status(400).json({error: error.message})
+        res.status(400).json({error: error.message});
     }
-})
+});
 
 router.delete('/:id', (req, res) => {
-    res.json({mssg: 'delete a gun'})
-})
+    res.json({mssg: 'delete a gun'});
+});
 
 router.patch('/:id', (req, res) => {
-    res.json({mssg: 'rename a gun'})
-})
+    res.json({mssg: 'rename a gun'});
+});
 
-export default router
+export default router;
