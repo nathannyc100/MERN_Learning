@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
 
-import gunsRoutes from './routes/firearms.js'
+import firearmRoutes from './routes/firearms.js'
 
 const app = express()
 dotenv.config()
@@ -11,7 +11,7 @@ dotenv.config()
 app.use(express.json())
 
 //routes
-app.use('/api/guns', gunsRoutes)
+app.use('/api/firearms', firearmRoutes)
 
 //db
 mongoose.connect(process.env.MONGO_URI)
