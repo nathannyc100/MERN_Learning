@@ -10,8 +10,15 @@ dotenv.config()
 //middleware
 app.use(express.json())
 
+app.use((req, res, next) => {
+    console.log(req.url)
+    next();
+});
+
 //routes
 app.use('/api/firearms', firearmRoutes)
+
+console.log('test')
 
 //db
 mongoose.connect(process.env.MONGO_URI)

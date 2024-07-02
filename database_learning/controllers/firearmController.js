@@ -4,6 +4,8 @@ import mongoose from 'mongoose'
 export const getFirearms = async (req, res) => {
     const firearms = await Firearm.find({}).sort({ createdAt: -1 });
 
+    console.log('returned firearms');
+
     res.status(200).json(firearms);
 }
 
